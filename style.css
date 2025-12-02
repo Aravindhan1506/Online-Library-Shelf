@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0px;
+
+    padding: 0px;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+
+}
+
+.sidebar {
+    background-color: #483131;
+    width: 220px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    color: beige;
+    box-shadow: 5px 5px 5px grey;
+
+
+}
+
+.heading {
+    font-family: "open sans";
+    font-weight: 600;
+    font-size: 25px;
+    color: beige;
+    padding-left: 8px;
+    margin-bottom: 300px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+}
+
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+
+}
+
+.profile-name {
+    font-family: "open sans";
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+    color: beige;
+
+}
+
+.option-container {
+    flex-grow: 1;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 12px;
+
+}
+
+.main-content-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+
+.content-section {
+
+    color: #6f4e37;
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px grey;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 40px;
+    padding-left: 40px;
+    background-color: #fdfbD4;
+}
+
+.content-container {
+    border-radius: 30px;
+    padding: 10px;
+
+
+
+}
+
+.genre {
+    background-color: brown;
+    color: beige;
+    border-radius: 10px;
+    border: none;
+}
+
+.title {
+    color: #6f4e37;
+    font-family: "open sans";
+    font-size: 30px;
+}
+
+.subtitle {
+    color: #6f4e37;
+    font-family: "open sans";
+    font-size: 20px;
+
+}
+
+@media (max-width:580px) {
+    .title {
+        color: #6f4e37;
+        font-family: "open sans";
+        font-size: 20px;
+
+    }
+
+    .subtitle {
+        color: #6f4e37;
+        font-family: "open sans";
+        font-size: 15px;
+    }
+
+}
+
+.book-section {
+    color: #6f4e37;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.Booksshelf {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    overflow-x: scroll;
+}
+
+.Bookcard {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+
+    flex-shrink: 0;
+    flex-basis: 220px;
+
+    align-content: start;
+}
+
+.Bookcard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+
+}
+
+.bookcover {
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+    background-color: beige;
+}
+
+.bookcover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+
+}
+
+.bookinfo {
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.booktitle {
+    font-family: "serif";
+    font-size: 20px;
+    color: #6f4e37;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.bookauthor {
+    font-size: 14px;
+    color: #6f4e37;
+    margin-bottom: 8px;
+
+}
+
+
+.checked {
+    color: gold;
+}
+
+.hoverdetails {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(74, 59, 50, 0.95);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    text-align: center;
+    opacity: 0;
+    z-index: 5;
+}
+
+.bookcover:hover .hoverdetails {
+    opacity: 10;
+    transform: translateY(0);
+
+}
+
+.hoverdetails p {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+
+.popularBookcard {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+
+    flex-shrink: 0;
+    flex-basis: 220px;
+
+    align-content: start;
+}
+
+.popularBooksshelf {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    overflow-x: auto;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+
+}
