@@ -15,7 +15,7 @@ FEATURES
 
 * Card shadows and rounded frames to mimic physical book spines and frames.
 
-* Semantic HTML elements (<header>, <nav>, <main>, <section>, <article>, <footer>).
+* Semantic HTML elements (header, nav, main, section, article, footer).
 
 * Mobile-first responsive layout that switches card grid to multi-row and collapses sidebar to top or hamburger (CSS-only solution recommended; small JS optional).
 
@@ -31,7 +31,10 @@ HOW TO RUN
 
 
 SCREEN SHOT 
-![image alt]()
+![image alt](image1.png)
+
+
+![image alt](image2.png)
 
 
 
